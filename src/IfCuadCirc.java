@@ -15,8 +15,7 @@ public class IfCuadCirc {
 		String diago="diagonal";
 		String peri="perimetro";
 		String area="area";
-		if(!(fig=="cuadrado"||fig=="circulo"));
-		System.out.println("Figura no disponible");
+		////
 		if(fig.equals("cuadrado")) {
 			System.out.println("Quieres usar el lado que esta por default?. Escribe 1 si sí, y si no, escribe 0");
 			Scanner sca= new Scanner(System.in);
@@ -112,10 +111,10 @@ public class IfCuadCirc {
 						//System.out.println("El area del cuadrado es "+ar);
 					}
 					}
-		else {
-			if(!(ope==op));
-					System.out.println("Operacion no definida");
-		}			
+		//else {
+			//if(!(ope==op));
+				//	System.out.println("Operacion no definida");
+		//}			
 		}
 		else {
 			if(fig.equals("circulo"));
@@ -173,17 +172,19 @@ public class IfCuadCirc {
 							//System.out.println("El perimetro del circulo es "+are);
 						}
 				}
-		else {
-			if(!(ope==op));
-				System.out.println("Operacion no definida");
-		}
+		//else {
+			//if(!(ope==op));
+				//System.out.println("Operacion no definida");
+		//}
 				//else {
 					//if(!(fig=="cuadrado"||fig=="circulo"));
 					//System.out.println("Figura no disponible");
 					//if(!(fig=="circulo"));
 					//System.out.println("Figura no disponible");
 				//}
-		}	
+		}
+		//if(!(fig=="cuadrado"||fig=="circulo"));
+		//System.out.println("Figura no disponible");
 }
 }
 //}
