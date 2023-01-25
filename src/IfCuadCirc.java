@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//El cuadrado funciona con this. y el circulo sin this
 public class IfCuadCirc {
 	public static void main(String[] argumentos){
 		String cuad="cuadrado";
@@ -15,6 +15,8 @@ public class IfCuadCirc {
 		String diago="diagonal";
 		String peri="perimetro";
 		String area="area";
+		if(!(fig=="cuadrado"||fig=="circulo"));
+		System.out.println("Figura no disponible");
 		if(fig.equals("cuadrado")) {
 			System.out.println("Quieres usar el lado que esta por default?. Escribe 1 si sí, y si no, escribe 0");
 			Scanner sca= new Scanner(System.in);
@@ -31,7 +33,7 @@ public class IfCuadCirc {
 						//double l;
 						//l=160808;
 						df.calcDiago();
-						System.out.println("Diagonal es "+df.calcDiago());
+						System.out.println("La diagonal del cuadrado es "+df.calcDiago());
 				}
 				else {
 					if(resp==0);
@@ -40,22 +42,26 @@ public class IfCuadCirc {
 					int l=lado;
 					double c=l;
 					System.out.println("El lado de tu cuadrado es "+c+"\n");
-					double diag;
-					diag= Math.sqrt(Math.pow(c, 2)+ Math.pow(c, 2));
-					System.out.println("La diagonal del cuadrado es "+diag);
+					Ejcuadrado df= new Ejcuadrado(c);//Aquí funciona con this.
+					//df.ladoDife(c);
+					df.calcDiago();
+					System.out.println("La diagonal del cuadrado es "+df.calcDiago());
+					//double diag;
+					//diag= Math.sqrt(Math.pow(c, 2)+ Math.pow(c, 2));
+					//System.out.println("La diagonal del cuadrado es "+diag);
 						//double diag;
 						//diag= Math.sqrt(Math.pow(c, 2)+ Math.pow(c, 2));
 						//System.out.println("La diagonal del cuadrado es "+diag);
 				}
 				}
 				if(ope.equals("perimetro")) {
-					System.out.println("elegiste calcular "+ope);
+					System.out.println("Elegiste calcular "+ope);
 					if(resp==1) {
 						Ejcuadrado df= new Ejcuadrado();
 						//double l;
 						//l=160808;
 						df.calcPeri();
-						System.out.println("Perimetro es "+df.calcPeri());
+						System.out.println("El perimetro del cuadrado es "+df.calcPeri());
 					}	
 					else {
 						if(resp==0);
@@ -64,19 +70,27 @@ public class IfCuadCirc {
 						int l=lado;
 						double c=l;
 						System.out.println("El lado de tu cuadrado es "+c+"\n");
-						double per;
-						per= c*4;
-						System.out.println("El perimetro del cuadrado es "+per);
+						Ejcuadrado df= new Ejcuadrado(c);//Aquí funciona con this.
+						df.calcPeri();
+						System.out.println("El perimetro del cuadrado es "+df.calcPeri());
+						//Ejcuadrado dfc= new Ejcuadrado();
+						//dfc.ladoDife(c);
+						//dfc.calcPeri();
+						//System.out.println("Peri es "+dfc.calcPeri());
+						//////////////
+						//double per;
+						//per= c*4;
+						//System.out.println("El perimetro del cuadrado es "+per);
 					}
 				}
 				if(ope.equals("area")) {
-					System.out.println("elegiste calcular "+ope);
+					System.out.println("Elegiste calcular "+ope);
 					if(resp==1) {
 						Ejcuadrado df= new Ejcuadrado();
 						//double l;
 						//l=160808;
 						df.calcArea();
-						System.out.println("Perimetro es "+df.calcArea());
+						System.out.println("El area del cuadrado es "+df.calcArea());
 					}	
 					else {
 						if(resp==0);
@@ -85,12 +99,23 @@ public class IfCuadCirc {
 						int l=lado;
 						double c=l;
 						System.out.println("El lado de tu cuadrado es "+c+"\n");
-						double ar;
-						ar= c*c;
-						System.out.println("El area del cuadrado es "+ar);
+						Ejcuadrado df= new Ejcuadrado(c);//Aquí funciona con this.
+						df.calcArea();
+						System.out.println("El area del cuadrado es "+df.calcArea());
+						//Ejcuadrado dfc= new Ejcuadrado();
+						//dfc.ladoDife(c);
+						//dfc.calcArea();
+						//System.out.println("Area es "+dfc.calcArea());
+						///////////////
+						//double ar;
+						//ar= c*c;
+						//System.out.println("El area del cuadrado es "+ar);
 					}
 					}
-				
+		else {
+			if(!(ope==op));
+					System.out.println("Operacion no definida");
+		}			
 		}
 		else {
 			if(fig.equals("circulo"));
@@ -103,11 +128,11 @@ public class IfCuadCirc {
 			String op=operac.nextLine();
 			String ope=op;
 				if(ope.equals("perimetro")) {
-					System.out.println("elegiste calcular "+ope);
+					System.out.println("Elegiste calcular "+ope);
 						if(resp==1) {
 							ElCirculo df= new ElCirculo();
 							df.calcCirc();
-							System.out.println("Perimetro es "+df.calcCirc());
+							System.out.println("El perimetro del circulo es "+df.calcCirc());
 						}
 						else {
 							if(resp==0);
@@ -116,17 +141,21 @@ public class IfCuadCirc {
 							int r=radio;
 							double c=r;
 							System.out.println("El radio de tu circulo es "+c+"\n");
-							double per;
-							per= c*2*3.1416;
-							System.out.println("El perimetro del círculo es "+per);
+							ElCirculo dfc= new ElCirculo();
+							dfc.radioDife(c);
+							dfc.calcCirc();
+							System.out.println("El perimetro del circulo es "+dfc.calcCirc());
+							//double per;
+							//per= c*2*3.1416;
+							//System.out.println("El perimetro del círculo es "+per);
 						}
 				}
 				if(ope.equals("area")) {
-					System.out.println("elegiste calcular "+ope);
+					System.out.println("Elegiste calcular "+ope);
 						if(resp==1) {
 							ElCirculo df= new ElCirculo();
 							df.calcAreac();
-							System.out.println("Area es "+df.calcAreac());
+							System.out.println("El area del circulo es "+df.calcAreac());
 						}
 						else {
 							if(resp==0);
@@ -135,12 +164,26 @@ public class IfCuadCirc {
 							int r=radio;
 							double c=r;
 							System.out.println("El radio de tu circulo es "+c+"\n");
-							double are;
-							are= c*c*3.1416;
-							System.out.println("El perimetro del circulo es "+are);
+							ElCirculo dfc= new ElCirculo();
+							dfc.radioDife(c);
+							dfc.calcAreac();
+							System.out.println("El area del circulo es "+dfc.calcAreac());
+							//double are;
+							//are= c*c*3.1416;
+							//System.out.println("El perimetro del circulo es "+are);
 						}
 				}
+		else {
+			if(!(ope==op));
+				System.out.println("Operacion no definida");
 		}
+				//else {
+					//if(!(fig=="cuadrado"||fig=="circulo"));
+					//System.out.println("Figura no disponible");
+					//if(!(fig=="circulo"));
+					//System.out.println("Figura no disponible");
+				//}
+		}	
 }
 }
 //}

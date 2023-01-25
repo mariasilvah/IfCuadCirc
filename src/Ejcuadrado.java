@@ -2,8 +2,12 @@
 public class Ejcuadrado {
 	public double l;
 	public Ejcuadrado() {
-		l=160808;
-		//double c;
+		this(160808);
+		//l=160808;
+		//double c=l;
+	}
+	public Ejcuadrado(double k) {
+		this.l=k;
 	}
 	public double calcDiago()
 	{
